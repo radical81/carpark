@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>rates</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>Early Bird</string>
+			<key>type</key>
+			<string>Flat Rate</string>
+			<key>price</key>
+			<integer>13</integer>
+			<key>entry</key>
+			<dict>
+				<key>start</key>
+				<string>6:00 AM</string>
+				<key>end</key>
+				<string>9:00 AM</string>
+				<key>days</key>
+				<array/>
+			</dict>
+			<key>exit</key>
+			<dict>
+				<key>start</key>
+				<string>3:30 PM</string>
+				<key>end</key>
+				<string>11:30 PM</string>
+				<key>days</key>
+				<array/>
+			</dict>
+			<key>maxCalendarDays</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Night Rate</string>
+			<key>type</key>
+			<string>Flat Rate</string>
+			<key>price</key>
+			<real>6.5</real>
+			<key>entry</key>
+			<dict>
+				<key>start</key>
+				<string>6:00 PM</string>
+				<key>end</key>
+				<string>12:00 AM</string>
+				<key>days</key>
+				<array>
+					<string>MONDAY</string>
+					<string>TUESDAY</string>
+					<string>WEDNESDAY</string>
+					<string>THURSDAY</string>
+					<string>FRIDAY</string>
+				</array>
+			</dict>
+			<key>exit</key>
+			<dict>
+				<key>start</key>
+				<string></string>
+				<key>end</key>
+				<string>6:00 AM</string>
+				<key>days</key>
+				<array>
+					<string>TUESDAY</string>
+					<string>WEDNESDAY</string>
+					<string>THURSDAY</string>
+					<string>FRIDAY</string>
+					<string>SATURDAY</string>
+				</array>
+			</dict>
+			<key>maxCalendarDays</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Weekend Rate</string>
+			<key>type</key>
+			<string>Flat Rate</string>
+			<key>price</key>
+			<integer>10</integer>
+			<key>entry</key>
+			<dict>
+				<key>start</key>
+				<string>12:00 AM</string>
+				<key>end</key>
+				<string></string>
+				<key>days</key>
+				<array>
+					<string>FRIDAY</string>
+					<string>SATURDAY</string>
+				</array>
+			</dict>
+			<key>exit</key>
+			<dict>
+				<key>start</key>
+				<string></string>
+				<key>end</key>
+				<string>12:00 AM</string>
+				<key>days</key>
+				<array>
+					<string>SUNDAY</string>
+				</array>
+			</dict>
+			<key>maxCalendarDays</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Standard Rate</string>
+			<key>type</key>
+			<string>Hourly Rate</string>
+			<key>prices</key>
+			<array>
+				<dict>
+					<key>min</key>
+					<integer>0</integer>
+					<key>max</key>
+					<integer>1</integer>
+				</dict>
+				<dict>
+					<key>min</key>
+					<integer>1</integer>
+					<key>max</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
+					<key>min</key>
+					<integer>2</integer>
+					<key>max</key>
+					<integer>3</integer>
+				</dict>
+				<dict>
+					<key>min</key>
+					<integer>3</integer>
+				</dict>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

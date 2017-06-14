@@ -13,6 +13,7 @@
 		86C43DE91EF1542200EAED15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86C43DE81EF1542200EAED15 /* Assets.xcassets */; };
 		86C43DEC1EF1542200EAED15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86C43DEA1EF1542200EAED15 /* LaunchScreen.storyboard */; };
 		86C43DF71EF1542300EAED15 /* CarParkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C43DF61EF1542300EAED15 /* CarParkTests.swift */; };
+		86C43E041EF1572400EAED15 /* Rates.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86C43E031EF1572400EAED15 /* Rates.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		86C43DF21EF1542300EAED15 /* CarParkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarParkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		86C43DF61EF1542300EAED15 /* CarParkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarParkTests.swift; sourceTree = "<group>"; };
 		86C43DF81EF1542300EAED15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86C43E031EF1572400EAED15 /* Rates.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Rates.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,8 @@
 		86C43DE01EF1542200EAED15 /* CarPark */ = {
 			isa = PBXGroup;
 			children = (
+				86C43E021EF156F300EAED15 /* Helpers */,
+				86C43E011EF156DD00EAED15 /* Model */,
 				86C43DE11EF1542200EAED15 /* AppDelegate.swift */,
 				86C43DE31EF1542200EAED15 /* ViewController.swift */,
 				86C43DE51EF1542200EAED15 /* Main.storyboard */,
@@ -94,6 +98,21 @@
 				86C43DF81EF1542300EAED15 /* Info.plist */,
 			);
 			path = CarParkTests;
+			sourceTree = "<group>";
+		};
+		86C43E011EF156DD00EAED15 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				86C43E031EF1572400EAED15 /* Rates.plist */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		86C43E021EF156F300EAED15 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +200,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86C43E041EF1572400EAED15 /* Rates.plist in Resources */,
 				86C43DEC1EF1542200EAED15 /* LaunchScreen.storyboard in Resources */,
 				86C43DE91EF1542200EAED15 /* Assets.xcassets in Resources */,
 				86C43DE71EF1542200EAED15 /* Main.storyboard in Resources */,
