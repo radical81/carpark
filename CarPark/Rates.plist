@@ -9,6 +9,8 @@
 			<string>Early Bird</string>
 			<key>type</key>
 			<string>Flat Rate</string>
+			<key>type_code</key>
+			<string>flat</string>
 			<key>price</key>
 			<integer>13</integer>
 			<key>entry</key>
@@ -29,7 +31,7 @@
 				<key>days</key>
 				<array/>
 			</dict>
-			<key>maxCalendarDays</key>
+			<key>max_days</key>
 			<integer>0</integer>
 		</dict>
 		<dict>
@@ -37,6 +39,8 @@
 			<string>Night Rate</string>
 			<key>type</key>
 			<string>Flat Rate</string>
+			<key>type_code</key>
+			<string>flat</string>
 			<key>price</key>
 			<real>6.5</real>
 			<key>entry</key>
@@ -69,7 +73,7 @@
 					<string>SATURDAY</string>
 				</array>
 			</dict>
-			<key>maxCalendarDays</key>
+			<key>max_days</key>
 			<integer>1</integer>
 		</dict>
 		<dict>
@@ -77,6 +81,8 @@
 			<string>Weekend Rate</string>
 			<key>type</key>
 			<string>Flat Rate</string>
+			<key>type_code</key>
+			<string>flat</string>
 			<key>price</key>
 			<integer>10</integer>
 			<key>entry</key>
@@ -102,7 +108,7 @@
 					<string>SUNDAY</string>
 				</array>
 			</dict>
-			<key>maxCalendarDays</key>
+			<key>max_days</key>
 			<integer>2</integer>
 		</dict>
 		<dict>
@@ -110,6 +116,8 @@
 			<string>Standard Rate</string>
 			<key>type</key>
 			<string>Hourly Rate</string>
+			<key>type_code</key>
+			<string>hourly</string>
 			<key>prices</key>
 			<array>
 				<dict>
@@ -133,6 +141,8 @@
 				<dict>
 					<key>min</key>
 					<integer>3</integer>
+					<key>max</key>
+					<string>-1</string>
 				</dict>
 			</array>
 		</dict>
