@@ -14,6 +14,7 @@
 		86C43DEC1EF1542200EAED15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86C43DEA1EF1542200EAED15 /* LaunchScreen.storyboard */; };
 		86C43DF71EF1542300EAED15 /* CarParkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C43DF61EF1542300EAED15 /* CarParkTests.swift */; };
 		86C43E041EF1572400EAED15 /* Rates.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86C43E031EF1572400EAED15 /* Rates.plist */; };
+		86D1E6151EF2960100E92AFA /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1E6141EF2960100E92AFA /* Rate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		86C43DF61EF1542300EAED15 /* CarParkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarParkTests.swift; sourceTree = "<group>"; };
 		86C43DF81EF1542300EAED15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86C43E031EF1572400EAED15 /* Rates.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Rates.plist; sourceTree = "<group>"; };
+		86D1E6141EF2960100E92AFA /* Rate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		86C43DE01EF1542200EAED15 /* CarPark */ = {
 			isa = PBXGroup;
 			children = (
+				86D1E6181EF2969500E92AFA /* Data */,
 				86C43E021EF156F300EAED15 /* Helpers */,
 				86C43E011EF156DD00EAED15 /* Model */,
 				86C43DE11EF1542200EAED15 /* AppDelegate.swift */,
@@ -103,7 +106,7 @@
 		86C43E011EF156DD00EAED15 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				86C43E031EF1572400EAED15 /* Rates.plist */,
+				86D1E6141EF2960100E92AFA /* Rate.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -113,6 +116,14 @@
 			children = (
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		86D1E6181EF2969500E92AFA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				86C43E031EF1572400EAED15 /* Rates.plist */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				86C43DE41EF1542200EAED15 /* ViewController.swift in Sources */,
+				86D1E6151EF2960100E92AFA /* Rate.swift in Sources */,
 				86C43DE21EF1542200EAED15 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +444,7 @@
 				86C43DFD1EF1542300EAED15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		86C43DFE1EF1542300EAED15 /* Build configuration list for PBXNativeTarget "CarParkTests" */ = {
 			isa = XCConfigurationList;
@@ -440,6 +453,7 @@
 				86C43E001EF1542300EAED15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
