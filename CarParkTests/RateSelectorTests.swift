@@ -61,6 +61,24 @@ class RateSelectorTests: XCTestCase {
         XCTAssertEqual(rate.name, "Early Bird")
     }
 
+    func testSelectRate_given20170615_602am_20170615_1002pm_returnEarlyBirdRate() {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy h:mm a"
+        let entryDate = formatter.date(from: "15/06/2017 6:02 AM")
+        let exitDate = formatter.date(from: "15/06/2017 10:02 PM")
+        let rate = rateSelector.selectRate(enter: entryDate!, leave: exitDate!)
+        XCTAssertEqual(rate.name, "Early Bird")
+    }
+    
+    func testSelectRate_given20170615_700am_20170615_530pm_returnEarlyBirdRate() {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy h:mm a"
+        let entryDate = formatter.date(from: "15/06/2017 7:00 AM")
+        let exitDate = formatter.date(from: "15/06/2017 5:30 PM")
+        let rate = rateSelector.selectRate(enter: entryDate!, leave: exitDate!)
+        XCTAssertEqual(rate.name, "Early Bird")
+    }
+    
     func testSelectRate_given20170615_700pm_20170616_600am_returnNightRate() {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd/MM/yyyy h:mm a"
@@ -70,7 +88,16 @@ class RateSelectorTests: XCTestCase {
         XCTAssertEqual(rate.name, "Night Rate")
     }
 
-    func testSelectRate_given20170616_1100pm_20170617_1100am_returnNightRate() {
+    func testSelectRate_given20170615_640pm_20170616_530am_returnNightRate() {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy h:mm a"
+        let entryDate = formatter.date(from: "15/06/2017 6:40 PM")
+        let exitDate = formatter.date(from: "16/06/2017 5:30 AM")
+        let rate = rateSelector.selectRate(enter: entryDate!, leave: exitDate!)
+        XCTAssertEqual(rate.name, "Night Rate")
+    }
+
+    func testSelectRate_given20170616_1100pm_20170617_500am_returnNightRate() {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd/MM/yyyy h:mm a"
         let entryDate = formatter.date(from: "16/06/2017 11:00 PM")
@@ -88,11 +115,29 @@ class RateSelectorTests: XCTestCase {
         XCTAssertEqual(rate.name, "Weekend Rate")
     }
 
+    func testSelectRate_given20170617_700am_20170617_500pm_returnWeekendRate() {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy h:mm a"
+        let entryDate = formatter.date(from: "17/06/2017 7:00 AM")
+        let exitDate = formatter.date(from: "17/06/2017 5:00 PM")
+        let rate = rateSelector.selectRate(enter: entryDate!, leave: exitDate!)
+        XCTAssertEqual(rate.name, "Weekend Rate")
+    }
+    
     func testSelectRate_given20170617_700pm_20170617_800pm_returnWeekendRate() {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd/MM/yyyy h:mm a"
         let entryDate = formatter.date(from: "17/06/2017 7:00 PM")
         let exitDate = formatter.date(from: "17/06/2017 8:00 PM")
+        let rate = rateSelector.selectRate(enter: entryDate!, leave: exitDate!)
+        XCTAssertEqual(rate.name, "Weekend Rate")
+    }
+
+    func testSelectRate_given20170617_1002pm_20170617_1108pm_returnWeekendRate() {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy h:mm a"
+        let entryDate = formatter.date(from: "17/06/2017 10:02 PM")
+        let exitDate = formatter.date(from: "17/06/2017 11:08 PM")
         let rate = rateSelector.selectRate(enter: entryDate!, leave: exitDate!)
         XCTAssertEqual(rate.name, "Weekend Rate")
     }

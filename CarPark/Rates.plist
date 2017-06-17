@@ -20,7 +20,13 @@
 				<key>end</key>
 				<string>9:00 AM</string>
 				<key>days</key>
-				<array/>
+				<array>
+					<string>MONDAY</string>
+					<string>TUESDAY</string>
+					<string>WEDNESDAY</string>
+					<string>THURSDAY</string>
+					<string>FRIDAY</string>
+				</array>
 			</dict>
 			<key>exit</key>
 			<dict>
@@ -29,7 +35,13 @@
 				<key>end</key>
 				<string>11:30 PM</string>
 				<key>days</key>
-				<array/>
+				<array>
+					<string>MONDAY</string>
+					<string>TUESDAY</string>
+					<string>WEDNESDAY</string>
+					<string>THURSDAY</string>
+					<string>FRIDAY</string>
+				</array>
 			</dict>
 			<key>max_days</key>
 			<integer>0</integer>

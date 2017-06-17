@@ -70,13 +70,14 @@ class RateSelector {
             let exitDays = r.exit["days"] as! NSArray
             
             let maxDays = r.maxDays
-                      
-            //Weekend's tricky
+
+            let daysBetween = timeHelper.numberOfDaysInBetween(enter: enter, leave: leave)
+            
             if timeHelper.isInTime(date: enter, start: entryStart, end: entryEnd)
                 && timeHelper.isDateInDayRange(date: enter, days: entryDays)
                 && timeHelper.isInTime(date: leave, start: exitStart, end: exitEnd)
                 && timeHelper.isDateInDayRange(date: leave, days: exitDays)
-                && Int(timeHelper.numberOfDaysInBetween(enter: enter, leave: leave)) <= Int(maxDays)  {
+                && Int(daysBetween) <= Int(maxDays)  {
                 return r
             }
         }

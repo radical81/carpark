@@ -12,7 +12,9 @@ class TimeCheckHelper {
 
     func isInTime(date: Date, start: String, end: String) -> Bool {
         let formatter = DateFormatter()
-        formatter.dateFormat = "h:mm a"
+        formatter.dateFormat = "yyyy-MM-dd h:mm a"
+        let auLocale = Locale(identifier: "au")
+        formatter.locale = auLocale
         let calendar = Calendar.current
         let hour = calendar.component(.hour, from: date)
         let minutes = calendar.component(.minute, from: date)
@@ -20,7 +22,7 @@ class TimeCheckHelper {
         print("time = \(hour):\(minutes)")
         
         if !start.isEmpty {
-            let startDate = formatter.date(from: start)
+            let startDate = formatter.date(from: "1999-01-01 "+start)
             if startDate == nil {
                 return false
             }
@@ -30,7 +32,7 @@ class TimeCheckHelper {
             if hour < startHour {
                 return false
             }
-            else {
+            else if hour == startHour {
                 if minutes < startMinute {
                     return false
                 }
@@ -38,7 +40,7 @@ class TimeCheckHelper {
         }
         
         if !end.isEmpty {
-            let endDate = formatter.date(from: end)
+            let endDate = formatter.date(from: "1999-01-01 "+end)
             if endDate == nil {
                 return false
             }
@@ -51,7 +53,7 @@ class TimeCheckHelper {
                 }
                 return false
             }
-            else {
+            else if hour == endHour {
                 if minutes > endMinute {
                     return false
                 }
