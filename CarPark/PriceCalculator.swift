@@ -16,7 +16,7 @@ class PriceCalculator {
             let hoursBetween = t.numberOfHoursInBetween(enter: enter, leave: leave) as! Int
             if !rate.hourlyPrices.isEmpty {
                 for r in rate.hourlyPrices {
-                    if hoursBetween > r["min"] as! Int {
+                    if hoursBetween >= r["min"] as! Int {
                         if hoursBetween <= r["max"] as! Int && r["max"] != -1 {
                             let price = r["price"]
                             return price!

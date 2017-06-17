@@ -162,7 +162,7 @@
 					<key>min</key>
 					<integer>3</integer>
 					<key>max</key>
-					<string>-1</string>
+					<integer>-1</integer>
 					<key>price</key>
 					<integer>20</integer>
 				</dict>
