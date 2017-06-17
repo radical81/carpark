@@ -12,20 +12,40 @@ class ParkingViewController: UIViewController {
     @IBOutlet weak var parkDetails: UITextView!
     @IBOutlet weak var totalPrice: UILabel!
     
+    fileprivate var parkRateDesc: String?
+    fileprivate var parkPrice: NSNumber?
+    
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-
-        
-        // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        if (self.parkRateDesc != nil) {
+            parkDetails.text = self.parkRateDesc
+        }
+        if (self.parkPrice != nil) {
+            totalPrice.text = String(format: "%.2f", self.parkPrice!.doubleValue)
+        }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        parkDetails.text = ""
+        totalPrice.text = ""
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    func setParkRateDescText(description: String) {
+        self.parkRateDesc = description
+    }
+    
+    func setParkPrice(price: NSNumber) {
+        self.parkPrice = price
+    }
+    
     /*
     // MARK: - Navigation
 

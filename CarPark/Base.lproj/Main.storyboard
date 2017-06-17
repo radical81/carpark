@@ -110,6 +110,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="Yuv-z7-JA7"/>
                     <connections>
+                        <outlet property="entryDateTime" destination="38z-qg-ypd" id="06d-xe-SHM"/>
+                        <outlet property="exitDateTime" destination="TXs-Y9-b3t" id="baj-na-OOm"/>
                         <outlet property="parkBtn" destination="EJX-VW-SRN" id="cc4-zg-Mcn"/>
                     </connections>
                 </viewController>
