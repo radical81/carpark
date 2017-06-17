@@ -94,7 +94,7 @@ class Rate {
            self._entry = ["start": start, "end": end, "days": days]
         }
         else {
-            self._entry = ["start": "" as AnyObject, "end": "" as AnyObject, "days": AnyObject.self as AnyObject]
+            self._entry = ["start": "" as AnyObject, "end": "" as AnyObject, "days": NSArray()]
         }
 
         if let exit = data["exit"] as? [String: AnyObject],
@@ -104,7 +104,7 @@ class Rate {
             self._exit = ["start": start, "end": end, "days": days]
         }
         else {
-            self._exit = ["start": "" as AnyObject, "end": "" as AnyObject, "days": AnyObject.self as AnyObject]
+            self._exit = ["start": "" as AnyObject, "end": "" as AnyObject, "days": NSArray()]
         }
         
         if let maxDays = data["max_days"] as? NSNumber {

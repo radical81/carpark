@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8693D2FC1EF50193006B5D9E /* RateSelectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8693D2FB1EF50193006B5D9E /* RateSelectorTests.swift */; };
+		8693D2FD1EF50363006B5D9E /* Rates.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86C43E031EF1572400EAED15 /* Rates.plist */; };
 		86C43DE21EF1542200EAED15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C43DE11EF1542200EAED15 /* AppDelegate.swift */; };
 		86C43DE41EF1542200EAED15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C43DE31EF1542200EAED15 /* ViewController.swift */; };
 		86C43DE71EF1542200EAED15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86C43DE51EF1542200EAED15 /* Main.storyboard */; };
@@ -32,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8693D2FB1EF50193006B5D9E /* RateSelectorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateSelectorTests.swift; sourceTree = "<group>"; };
 		86C43DDE1EF1542200EAED15 /* CarPark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarPark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86C43DE11EF1542200EAED15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86C43DE31EF1542200EAED15 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				86C43DF61EF1542300EAED15 /* CarParkTests.swift */,
+				8693D2FB1EF50193006B5D9E /* RateSelectorTests.swift */,
 				86D1E6211EF33A1E00E92AFA /* TimeCheckHelperTests.swift */,
 				86C43DF81EF1542300EAED15 /* Info.plist */,
 			);
@@ -242,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8693D2FD1EF50363006B5D9E /* Rates.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8693D2FC1EF50193006B5D9E /* RateSelectorTests.swift in Sources */,
 				86C43DF71EF1542300EAED15 /* CarParkTests.swift in Sources */,
 				86D1E6221EF33A1E00E92AFA /* TimeCheckHelperTests.swift in Sources */,
 			);
