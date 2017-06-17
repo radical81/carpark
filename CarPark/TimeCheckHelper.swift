@@ -20,13 +20,13 @@ class TimeCheckHelper {
         print("time = \(hour):\(minutes)")
         
         if !start.isEmpty {
-            let startDate = formatter.date(from: start as! String)
+            let startDate = formatter.date(from: start)
             if startDate == nil {
                 return false
             }
             let startHour = calendar.component(.hour, from: startDate!)
             let startMinute = calendar.component(.minute, from: startDate!)
-//            print("rate time = \(entryStartHour):\(entryStartMinute)")
+
             if hour < startHour {
                 return false
             }
@@ -38,14 +38,17 @@ class TimeCheckHelper {
         }
         
         if !end.isEmpty {
-            let endDate = formatter.date(from: end as! String)
+            let endDate = formatter.date(from: end)
             if endDate == nil {
                 return false
             }
             let endHour = calendar.component(.hour, from: endDate!)
             let endMinute = calendar.component(.minute, from: endDate!)
-//            print("rate time = \(entryEndHour):\(entryEndMinute)")
+
             if hour > endHour {
+                if(endHour == 0) { //12:00 AM
+                    return true
+                }
                 return false
             }
             else {
@@ -58,4 +61,8 @@ class TimeCheckHelper {
         
         return true
     }
+    
+    
+    
+    
 }
