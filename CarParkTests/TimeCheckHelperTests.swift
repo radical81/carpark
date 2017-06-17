@@ -85,4 +85,28 @@ class TimeCheckHelperTests: XCTestCase {
         let testDate = formatter.date(from: "01/06/2017 7:00 PM")
         XCTAssertTrue(timeCheckHelper.isDateInDayRange(date: testDate!, days: []))
     }
+
+    func testNumberOfDaysInBetween_given20170601_700am_to_20170601_600pm_return0() {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy h:mm a"
+        let entry = formatter.date(from: "01/06/2017 7:00 AM")
+        let exit = formatter.date(from: "01/06/2017 6:00 PM")
+        XCTAssertEqual(timeCheckHelper.numberOfDaysInBetween(enter: entry!, leave: exit!), 0)
+    }
+    
+    func testNumberOfDaysInBetween_given20170601_700pm_to_20170602_600am_return1() {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy h:mm a"
+        let entry = formatter.date(from: "01/06/2017 7:00 PM")
+        let exit = formatter.date(from: "02/06/2017 6:00 AM")
+        XCTAssertEqual(timeCheckHelper.numberOfDaysInBetween(enter: entry!, leave: exit!), 1)
+    }
+    
+    func testNumberOfDaysInBetween_given20170617_1200am_to_20170618_1100pm_return1() {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy h:mm a"
+        let entry = formatter.date(from: "17/06/2017 12:00 AM")
+        let exit = formatter.date(from: "18/06/2017 11:00 PM")
+        XCTAssertEqual(timeCheckHelper.numberOfDaysInBetween(enter: entry!, leave: exit!), 1)
+    }
 }

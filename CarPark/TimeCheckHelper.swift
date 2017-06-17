@@ -62,18 +62,30 @@ class TimeCheckHelper {
         return true
     }
     
-    func isDateInDayRange(date: Date, days: Array<String>) -> Bool {
+    func isDateInDayRange(date: Date, days: NSArray) -> Bool {
         let calendar = Calendar.current
-        let weekDay = calendar.component(.weekday, from: date)
-
-        if days.isEmpty {
+        let weekDay = calendar.component(.weekday, from: date) - 1
+        
+        if days.count == 0 {
             return true
         }
+        
         for d in days {
-            if(d.caseInsensitiveCompare(calendar.weekdaySymbols[weekDay]) == ComparisonResult.orderedSame) {
+            if((d as! String).caseInsensitiveCompare(calendar.weekdaySymbols[weekDay]) == ComparisonResult.orderedSame) {
                 return true
             }
         }
         return false
+    }
+    
+    func numberOfDaysInBetween(enter:Date, leave: Date) -> NSNumber {
+        let calendar = NSCalendar.current
+        
+        // Replace the hour (time) of both dates with 00:00
+        let date1 = calendar.startOfDay(for: enter)
+        let date2 = calendar.startOfDay(for: leave)
+        
+        let components = calendar.dateComponents([.day], from: date1, to: date2)
+        return components.day! as NSNumber
     }
 }
