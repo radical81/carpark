@@ -109,4 +109,20 @@ class TimeCheckHelperTests: XCTestCase {
         let exit = formatter.date(from: "18/06/2017 11:00 PM")
         XCTAssertEqual(timeCheckHelper.numberOfDaysInBetween(enter: entry!, leave: exit!), 1)
     }
+    
+    func testNumberOfHoursInBetween_given20170617_100am_20170619_1200am_return47() {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy h:mm a"
+        let entryDate = formatter.date(from: "17/06/2017 1:00 AM")
+        let exitDate = formatter.date(from: "19/06/2017 12:00 AM")
+        XCTAssertEqual(timeCheckHelper.numberOfHoursInBetween(enter: entryDate!, leave: exitDate!), 47)
+    }
+    
+    func testNumberOfHoursInBetween_given20170617_100am_20170617_600am_return5() {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy h:mm a"
+        let entryDate = formatter.date(from: "17/06/2017 1:00 AM")
+        let exitDate = formatter.date(from: "17/06/2017 6:00 AM")
+        XCTAssertEqual(timeCheckHelper.numberOfHoursInBetween(enter: entryDate!, leave: exitDate!), 5)
+    }
 }

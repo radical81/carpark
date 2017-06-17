@@ -88,4 +88,11 @@ class TimeCheckHelper {
         let components = calendar.dateComponents([.day], from: date1, to: date2)
         return components.day! as NSNumber
     }
+    
+    func numberOfHoursInBetween(enter:Date, leave: Date) -> NSNumber {
+        let calendar = NSCalendar.current
+        
+        let components = calendar.dateComponents([.hour], from: enter, to: leave)
+        return components.hour! as NSNumber
+    }
 }

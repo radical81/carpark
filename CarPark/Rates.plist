@@ -127,24 +127,32 @@
 					<integer>0</integer>
 					<key>max</key>
 					<integer>1</integer>
+					<key>price</key>
+					<integer>5</integer>
 				</dict>
 				<dict>
 					<key>min</key>
 					<integer>1</integer>
 					<key>max</key>
 					<integer>2</integer>
+					<key>price</key>
+					<integer>10</integer>
 				</dict>
 				<dict>
 					<key>min</key>
 					<integer>2</integer>
 					<key>max</key>
 					<integer>3</integer>
+					<key>price</key>
+					<integer>15</integer>
 				</dict>
 				<dict>
 					<key>min</key>
 					<integer>3</integer>
 					<key>max</key>
 					<string>-1</string>
+					<key>price</key>
+					<integer>20</integer>
 				</dict>
 			</array>
 		</dict>
