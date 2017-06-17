@@ -66,6 +66,7 @@
 				<string>6:00 AM</string>
 				<key>days</key>
 				<array>
+					<string>MONDAY</string>
 					<string>TUESDAY</string>
 					<string>WEDNESDAY</string>
 					<string>THURSDAY</string>
@@ -93,8 +94,8 @@
 				<string></string>
 				<key>days</key>
 				<array>
-					<string>FRIDAY</string>
 					<string>SATURDAY</string>
+					<string>SUNDAY</string>
 				</array>
 			</dict>
 			<key>exit</key>
@@ -105,6 +106,7 @@
 				<string>12:00 AM</string>
 				<key>days</key>
 				<array>
+					<string>SATURDAY</string>
 					<string>SUNDAY</string>
 				</array>
 			</dict>

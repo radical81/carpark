@@ -62,7 +62,18 @@ class TimeCheckHelper {
         return true
     }
     
-    
-    
-    
+    func isDateInDayRange(date: Date, days: Array<String>) -> Bool {
+        let calendar = Calendar.current
+        let weekDay = calendar.component(.weekday, from: date)
+
+        if days.isEmpty {
+            return true
+        }
+        for d in days {
+            if(d.caseInsensitiveCompare(calendar.weekdaySymbols[weekDay]) == ComparisonResult.orderedSame) {
+                return true
+            }
+        }
+        return false
+    }
 }

@@ -63,4 +63,26 @@ class TimeCheckHelperTests: XCTestCase {
         let entry = formatter.date(from: "01/06/2017 7:00 PM")
         XCTAssertTrue(timeCheckHelper.isInTime(date: entry!, start: "6:00 PM", end: "12:00 AM"))
     }
+    
+    
+    func testIsDateInDayRange_given20170601_700pm_daysThursdayFriday_returnTrue() {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy h:mm a"
+        let testDate = formatter.date(from: "01/06/2017 7:00 PM")
+        XCTAssertTrue(timeCheckHelper.isDateInDayRange(date: testDate!, days: ["THURSDAY", "FRIDAY"]))
+    }
+    
+    func testIsDateInDayRange_given20170601_700pm_daysSunday_returnFalse() {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy h:mm a"
+        let testDate = formatter.date(from: "01/06/2017 7:00 PM")
+        XCTAssertFalse(timeCheckHelper.isDateInDayRange(date: testDate!, days: ["SUNDAY"]))
+    }
+    
+    func testIsDateInDayRange_given20170601_700pm_daysNone_returnTrue() {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy h:mm a"
+        let testDate = formatter.date(from: "01/06/2017 7:00 PM")
+        XCTAssertTrue(timeCheckHelper.isDateInDayRange(date: testDate!, days: []))
+    }
 }
