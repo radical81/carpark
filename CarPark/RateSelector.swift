@@ -28,6 +28,7 @@ class RateSelector {
                 }
             }
         }
+        NSLog("%@",self.rates)
     }
 
     func getRates() -> Array<Rate> {
@@ -75,6 +76,14 @@ class RateSelector {
                && timeHelper.isInTime(date: leave, start: exitStart, end: exitEnd)
                 && timeHelper.isDateInDayRange(date: leave, days: exitDays)
                && timeHelper.numberOfDaysInBetween(enter: enter, leave: leave).isEqual(to: maxDays) {
+                return r
+            }
+            //Weekend's tricky
+            if timeHelper.isInTime(date: enter, start: entryStart, end: entryEnd)
+                && timeHelper.isDateInDayRange(date: enter, days: entryDays)
+                && timeHelper.isInTime(date: leave, start: exitStart, end: exitEnd)
+                && timeHelper.isDateInDayRange(date: leave, days: exitDays)
+                && Int(timeHelper.numberOfDaysInBetween(enter: enter, leave: leave)) < Int(maxDays)  {
                 return r
             }
         }
