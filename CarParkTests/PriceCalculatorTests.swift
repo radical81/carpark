@@ -42,6 +42,14 @@ class PriceCalculatorTests: XCTestCase {
         }
     }
     
+    func testCalculatePricegiven20170617_700pm_20170617_800pm_return5() {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy h:mm a"
+        let entryDate = formatter.date(from: "17/06/2017 7:00 PM")
+        let exitDate = formatter.date(from: "17/06/2017 8:00 PM")
+        XCTAssertEqual(priceCalculator.calculatePrice(enter: entryDate!, leave: exitDate!, rate: rate), 5)
+    }
+    
     func testCalculatePricegiven20170615_700pm_20170615_900pm_return10() {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd/MM/yyyy h:mm a"
