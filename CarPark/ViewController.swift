@@ -29,9 +29,8 @@ class ViewController: UIViewController {
         let priceCalc = PriceCalculator()
         let rateSelector = RateSelector()
         let correctRate = rateSelector.selectRate(enter: enter, leave: leave)
-        let details = "Rate: \(correctRate.name) \n " +
-                      "Type: \(correctRate.typeText) \n"
-        detailView.setParkRateDescText(description: details)
+        detailView.setParkRateName(rName: correctRate.name)
+        detailView.setParkRateType(rType: correctRate.typeText)
         let totalPrice = priceCalc.calculatePrice(enter: enter, leave: leave, rate: correctRate)
         detailView.setParkPrice(price: totalPrice)
     }

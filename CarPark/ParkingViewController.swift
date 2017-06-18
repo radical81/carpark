@@ -9,19 +9,25 @@
 import UIKit
 
 class ParkingViewController: UIViewController {
-    @IBOutlet weak var parkDetails: UITextView!
+    
+    @IBOutlet weak var rateName: UILabel!
+    @IBOutlet weak var rateType: UILabel!
     @IBOutlet weak var totalPrice: UILabel!
     
-    fileprivate var parkRateDesc: String?
+    fileprivate var parkRateName: String?
+    fileprivate var parkRateType: String?
     fileprivate var parkPrice: NSNumber?
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad()        
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        if (self.parkRateDesc != nil) {
-            parkDetails.text = self.parkRateDesc
+        if (self.parkRateName != nil) {
+            rateName.text = self.parkRateName
+        }
+        if (self.parkRateType != nil) {
+            rateType.text = self.parkRateType
         }
         if (self.parkPrice != nil) {
             totalPrice.text = String(format: "%.2f", self.parkPrice!.doubleValue)
@@ -29,7 +35,8 @@ class ParkingViewController: UIViewController {
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        parkDetails.text = ""
+        rateName.text = ""
+        rateType.text = ""
         totalPrice.text = ""
     }
     
@@ -38,10 +45,14 @@ class ParkingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func setParkRateDescText(description: String) {
-        self.parkRateDesc = description
+    func setParkRateName(rName: String) {
+        self.parkRateName = rName
     }
     
+    func setParkRateType(rType: String) {
+        self.parkRateType = rType
+    }
+        
     func setParkPrice(price: NSNumber) {
         self.parkPrice = price
     }
