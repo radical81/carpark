@@ -206,7 +206,6 @@
 				TargetAttributes = {
 					86C43DDD1EF1542200EAED15 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 98NZEPCGG6;
 						ProvisioningStyle = Automatic;
 					};
 					86C43DF11EF1542300EAED15 = {
@@ -411,7 +410,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 98NZEPCGG6;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CarPark/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.myspaceless.CarPark;
@@ -424,7 +423,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 98NZEPCGG6;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CarPark/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.myspaceless.CarPark;
